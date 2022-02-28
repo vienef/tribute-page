@@ -38,6 +38,8 @@
 }
 
 body {
+  height: 100vh;
+  width: 100%;
   background: var(--dark-metal-black);
   overflow: hidden;
 }
@@ -45,7 +47,7 @@ body {
 #main {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   user-select: none;
   animation: radar-background 5s 1.75s linear infinite alternate;
 }
