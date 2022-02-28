@@ -1,7 +1,7 @@
 'use strict';
 
 const moveBackgroundLayers = () => {
-  const layerNodes = ['body-before', 'body-after', 'main-before', 'main-after'],
+  const layerNodes = ['div-before', 'div-after', 'main-before', 'main-after'],
   movementDurations = ['3.5s', '3s', '2.5s', '2s'],
   element = document.documentElement.style;
 
@@ -14,7 +14,7 @@ const moveBackgroundLayers = () => {
 }; // Keep the background layer moving.
 
 const rotateBackgroundLayers = (initialRadius = [], finalRadius = []) => {  
-  const layerNodes = ['body-before', 'body-after', 'main-before', 'main-after'],
+  const layerNodes = ['div-before', 'div-after', 'main-before', 'main-after'],
   movementDurations = ['1.75s', '1.5s', '1.25s', '1s'],
   element = document.documentElement.style;
 

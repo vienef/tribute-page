@@ -31,8 +31,8 @@
   --golden-line: var(--golden-tan), var(--golden-gold), var(--golden-cream);
   --golden-shadow: rgba(255, 215, 0, 0.25), rgba(255, 215, 0, 0.05);
   /* Animation for the background layer */
-  --body-before-radius: 165deg;
-  --body-after-radius: 150deg;
+  --div-before-radius: 165deg;
+  --div-after-radius: 150deg;
   --main-before-radius: 135deg;
   --main-after-radius: 120deg;
 }
@@ -41,6 +41,12 @@ body {
   height: 100vh;
   width: 100%;
   background: var(--dark-metal-black);
+}
+
+body > div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
   overflow: hidden;
 }
 
@@ -48,12 +54,15 @@ body {
   display: flex;
   justify-content: center;
   height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
   user-select: none;
   animation: radar-background 5s 1.75s linear infinite alternate;
 }
 
-body::before,
-body::after,
+body > div::before,
+body > div::after,
 #main::before,
 #main::after {
   content: '';
@@ -68,16 +77,16 @@ body::after,
   opacity: 0.75;
 }
 
-body::before {
-  --initial-radius: var(--initial-body-before-radius, 180deg);
-  transform: rotate(var(--body-before-radius));
-  animation: var(--rotate-body-before, rotate-layers 1.75s ease-out);
+body > div::before {
+  --initial-radius: var(--initial-div-before-radius, 180deg);
+  transform: rotate(var(--div-before-radius));
+  animation: var(--rotate-div-before, rotate-layers 1.75s ease-out);
 }
 
-body::after {
-  --initial-radius: var(--initial-body-after-radius, 180deg);
-  transform: rotate(var(--body-after-radius));
-  animation: var(--rotate-body-after, rotate-layers 1.5s ease-out);
+body > div::after {
+  --initial-radius: var(--initial-div-after-radius, 180deg);
+  transform: rotate(var(--div-after-radius));
+  animation: var(--rotate-div-after, rotate-layers 1.5s ease-out);
 }
 
 #main::before {
