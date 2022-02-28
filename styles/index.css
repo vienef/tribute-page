@@ -40,8 +40,6 @@
 html {
   height: fill-available;
   height: -webkit-fill-available;
-  width: fill-available;
-  width: -webkit-fill-available;
 }
 
 body {
