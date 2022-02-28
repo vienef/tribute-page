@@ -37,8 +37,15 @@
   --main-after-radius: 120deg;
 }
 
+html {
+  height: fill-available;
+  height: -webkit-fill-available;
+}
+
 body {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
   width: 100%;
   background: var(--dark-metal-black);
   overflow: hidden;
