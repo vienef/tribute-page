@@ -1,0 +1,52 @@
+@keyframes radar-background {
+  from {
+    background: var(--radial-background);
+    background-size: 100%;
+  }
+  to {
+    background: var(--radial-background);
+    background-size: 300%;
+  }
+}
+
+@keyframes rotate-layers { from { transform: rotate(var(--initial-radius)); } }
+
+@keyframes invert-layers { from { transform: rotate(var(--initial-radius)); } }
+
+@keyframes dropping-down {
+  from {
+    bottom: 25%;
+    opacity: 0;
+  }
+}
+
+@keyframes popping-out { from { opacity: 0; } }
+
+@keyframes fading-out { from { opacity: 1; } }
+
+@keyframes expand {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes falling {
+  from {
+    margin-top: -100%;
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes growing-up { from { transform: scale(0); } }
+
+@keyframes shaking-block {
+  0%, 100% { transform: rotate3d(0); }
+  12.5%, 87.5% { transform: rotate3d(1, 1, 1, 15deg); }
+  25% { transform: rotate3d(1, 1, -1, 15deg); }
+  37.5% { transform: rotate3d(1, -1, -1, 15deg); }
+  50% { transform: rotate3d(-1, -1, -1, 15deg); }
+  62.5% { transform: rotate3d(-1, -1, 1, 15deg); }
+  75% { transform: rotate3d(-1, 1, 1, 15deg); }
+}

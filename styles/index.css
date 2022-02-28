@@ -1,0 +1,101 @@
+@import 'animation.css';
+@import 'home.css';
+@import 'button.css';
+@import 'biography.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+:root {
+  /* Sizing */
+  --base-size: 5vh;
+  /* Dark metal pallet for background base color and primary text color */
+  --dark-metal-black: #0B0909;
+  --dark-metal-ebony: rgba(68, 68, 76, 0.05);
+  --dark-metal-gray: rgba(140, 140, 140, 0.05);
+  --dark-metal-pewter: #D6D6D6;
+  /* Golden pallet for background layer color and highlight color */
+  --golden-tan: #B68D40;
+  --golden-gold: #D6AD60;
+  --golden-cream: #F4EBD0;
+  --pure-gold: #FFD700;
+  --transparent-gold: rgba(255, 215, 0, 0.5);
+  /* Background base pattern */
+  --radius: transparent, var(--dark-metal-gray), var(--dark-metal-ebony);
+  --radial-background: radial-gradient(circle at center, var(--radius), var(--radius), var(--radius), var(--radius), var(--radius)) center;
+  --background-line: calc(var(--base-size) / 20) solid var(--transparent-gold);
+  --golden-line: var(--golden-tan), var(--golden-gold), var(--golden-cream);
+  --golden-shadow: rgba(255, 215, 0, 0.25), rgba(255, 215, 0, 0.05);
+  /* Animation for the background layer */
+  --body-before-radius: 165deg;
+  --body-after-radius: 150deg;
+  --main-before-radius: 135deg;
+  --main-after-radius: 120deg;
+}
+
+body {
+  background: var(--dark-metal-black);
+  overflow: hidden;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  user-select: none;
+  animation: radar-background 5s 1.75s linear infinite alternate;
+}
+
+body::before,
+body::after,
+#main::before,
+#main::after {
+  content: '';
+  height: 100%;
+  width: 200%;
+  position: absolute;
+  top: 0;
+  right: -50%;
+  border-top: var(--background-line);
+  border-bottom: var(--background-line);
+  box-shadow: 0 0 calc(var(--base-size) * 2) var(--transparent-gold);
+  opacity: 0.75;
+}
+
+body::before {
+  --initial-radius: var(--initial-body-before-radius, 180deg);
+  transform: rotate(var(--body-before-radius));
+  animation: var(--rotate-body-before, rotate-layers 1.75s ease-out);
+}
+
+body::after {
+  --initial-radius: var(--initial-body-after-radius, 180deg);
+  transform: rotate(var(--body-after-radius));
+  animation: var(--rotate-body-after, rotate-layers 1.5s ease-out);
+}
+
+#main::before {
+  --initial-radius: var(--initial-main-before-radius, 180deg);
+  transform: rotate(var(--main-before-radius));
+  animation: var(--rotate-main-before, rotate-layers 1.25s ease-out);
+}
+
+#main::after {
+  --initial-radius: var(--initial-main-after-radius, 180deg);
+  transform: rotate(var(--main-after-radius));
+  animation: var(--rotate-main-after, rotate-layers 1s ease-out);
+}
+
+@media only screen and (orientation: portrait), (max-width: 1000px) and (min-height: 601px) {
+  #title { font: 900 var(--base-size)/1.5 'Cinzel Decorative', cursive; }
+
+  #tribute-info { width: 90%; }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 1000px) { #title { font: 900 calc(var(--base-size) * 1.5)/1.5 'Cinzel Decorative', cursive; } }
+
+@media only screen and (orientation: landscape) and (max-height: 600px) { :root { --base-size: 2.75vmax; } }
