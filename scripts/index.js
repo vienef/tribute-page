@@ -55,7 +55,7 @@ const clickButton = () => {
     initialRadius = ['165deg', '150deg', '135deg', '120deg'];
     finalRadius = generateFinalRadius(initialRadius, 75);
     document.documentElement.style.setProperty('--timeline-line', '75%');
-    document.querySelectorAll('#tribute-info>LI>A').forEach(time => time.style.animation = 'falling 1.75s ease-out');
+    document.querySelectorAll('#tribute-info>LI>SPAN:first-child').forEach(time => time.style.animation = 'falling 1.75s ease-out');
     hideElement(home);
     showElement(biography);
   } else {

@@ -38,20 +38,20 @@
 }
 
 html {
-  height: fill-available;
+  height: stretch;
   height: -webkit-fill-available;
 }
 
 body {
-  max-height: 100vh;
-  max-height: fill-available;
-  max-height: -webkit-fill-available;
+  min-height: 100vh;
+  min-height: stretch;
+  min-height: -webkit-fill-available;
   background: var(--dark-metal-black);
   overflow: hidden;
 }
 
 body > div {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: absolute;
   overflow: hidden;
@@ -60,7 +60,7 @@ body > div {
 #main {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   position: absolute;
   overflow: hidden;
