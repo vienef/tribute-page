@@ -12,7 +12,7 @@
 
 :root {
   /* Sizing */
-  --base-size: 5vh;
+  --base-size: 5vmin;
   /* Dark metal pallet for background base color and primary text color */
   --dark-metal-black: #0B0909;
   --dark-metal-ebony: rgba(68, 68, 76, 0.05);
