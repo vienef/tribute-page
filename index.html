@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@900&family=Roboto&display=swap">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="preload" href="styles/below-the-fold.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
     <title>Tribute Page of Ada Lovelace</title>
   </head>
@@ -31,32 +32,32 @@
       </div> <!-- Homepage -->
 
       <ul id="tribute-info">
-        <li>
-          <span>1833</span>
-          <span>Ada Lovelace met Charles Babbage for the first time. After the first meeting, Charles Babbage invited her to see the Difference Engine. She was fascinated by the machine.</span>
+        <li class="timeline">
+          <span class="year">1833</span>
+          <span class="bio">Ada Lovelace met Charles Babbage for the first time. After the first meeting, Charles Babbage invited her to see the Difference Engine. She was fascinated by the machine.</span>
         </li>
-        <li>
-          <span>1842</span>
-          <span>Ada Lovelace translated an article on Babbage's Analytical Engine by Luigi Menabrea. She appended notes explaining how the Analytical Engine differed from the Difference Engine.</span>
+        <li class="timeline">
+          <span class="year">1842</span>
+          <span class="bio">Ada Lovelace translated an article on Babbage's Analytical Engine by Luigi Menabrea. She appended notes explaining how the Analytical Engine differed from the Difference Engine.</span>
         </li>
-        <li>
-          <span>1844</span>
-          <span>Ada Lovelace worked on other projects after her work with Babbage. She commented to a friend about her desire to build a mathematical model ("a calculus of the nervous system").</span>
+        <li class="timeline">
+          <span class="year">1844</span>
+          <span class="bio">Ada Lovelace worked on other projects after her work with Babbage. She commented to a friend about her desire to build a mathematical model ("a calculus of the nervous system").</span>
         </li>
-        <li>
-          <span>1851</span>
-          <span>Ada Lovelace wrote to her mother, mentioning she was working on the relationship between maths and music.</span>
+        <li class="timeline">
+          <span class="year">1851</span>
+          <span class="bio">Ada Lovelace wrote to her mother, mentioning she was working on the relationship between maths and music.</span>
         </li>
       </ul> <!-- Biography page -->
 
       <a id="tribute-link" href="#">
-        <span>
-          <span>BIOGRAPHY</span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
+        <span class="box">
+          <span class="face">BIOGRAPHY</span>
+          <span class="face" aria-hidden="true"></span>
+          <span class="face" aria-hidden="true"></span>
+          <span class="face" aria-hidden="true"></span>
+          <span class="face" aria-hidden="true"></span>
+          <span class="face" aria-hidden="true"></span>
         </span>
       </a> <!-- 3d button -->
     </main>

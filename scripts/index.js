@@ -46,7 +46,7 @@ const generateFinalRadius = (radius = [], rotation = 0) => radius.map(radius => 
 const clickButton = () => {
   const home = document.querySelector('#main>DIV:first-child'),
   biography = document.getElementById('tribute-info'),
-  frontFace = document.querySelector('#tribute-link>SPAN>SPAN:first-child');
+  frontFace = document.querySelector('.face');
 
   let initialRadius, finalRadius;
 
@@ -55,7 +55,7 @@ const clickButton = () => {
     initialRadius = ['165deg', '150deg', '135deg', '120deg'];
     finalRadius = generateFinalRadius(initialRadius, 75);
     document.documentElement.style.setProperty('--timeline-line', '75%');
-    document.querySelectorAll('#tribute-info>LI>SPAN:first-child').forEach(time => time.style.animation = 'falling 1.75s ease-out');
+    document.querySelectorAll('.year').forEach(time => time.style.animation = 'falling 1.75s ease-out');
     hideElement(home);
     showElement(biography);
   } else {
